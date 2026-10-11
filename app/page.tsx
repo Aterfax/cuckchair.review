@@ -4,12 +4,8 @@ export default function Home() {
     <main className="page">
       <div className="card">
         <p className="eyebrow">GITHUB PAGES · NEXT.JS</p>
-
         <h1>cuckchair.review</h1>
-
-        <p className="intro">
-          Your Next.js deployment is working.
-        </p>
+        <p className="intro">Your Next.js deployment is working.</p>
 
         <div className="status">
           <span className="indicator" />
@@ -19,10 +15,9 @@ export default function Home() {
         <hr />
 
         <h2>Deployment checks</h2>
-
         <ul>
           <li>Next.js static export</li>
-          <li>GitHub Actions build and deployment</li>
+          <li>GitHub Actions deployment</li>
           <li>Custom domain configuration</li>
           <li>HTTPS delivery</li>
         </ul>
@@ -31,95 +26,6 @@ export default function Home() {
           Deployed automatically from the main branch.
         </p>
       </div>
-
-      <style jsx>{`
-        .page {
-          min-height: 100vh;
-          display: grid;
-          place-items: center;
-          padding: 32px 20px;
-          background: #0b1020;
-          color: #e5e7eb;
-          font-family: Arial, Helvetica, sans-serif;
-        }
-
-        .card {
-          width: 100%;
-          max-width: 620px;
-          padding: 40px;
-          border: 1px solid #303a50;
-          border-radius: 18px;
-          background: #141b2d;
-          box-shadow: 0 24px 80px #0005;
-        }
-
-        .eyebrow {
-          color: #93c5fd;
-          font-size: 12px;
-          font-weight: bold;
-          letter-spacing: 2px;
-        }
-
-        h1 {
-          margin: 24px 0 12px;
-          font-size: clamp(32px, 7vw, 52px);
-          letter-spacing: -2px;
-        }
-
-        .intro {
-          color: #aab5ca;
-          font-size: 18px;
-          line-height: 1.6;
-        }
-
-        .status {
-          display: inline-flex;
-          align-items: center;
-          gap: 10px;
-          margin: 18px 0;
-          padding: 10px 14px;
-          border: 1px solid #285b49;
-          border-radius: 999px;
-          background: #123629;
-          color: #a7f3d0;
-          font-size: 14px;
-        }
-
-        .indicator {
-          width: 9px;
-          height: 9px;
-          border-radius: 50%;
-          background: #34d399;
-        }
-
-        hr {
-          margin: 24px 0;
-          border: 0;
-          border-top: 1px solid #303a50;
-        }
-
-        h2 {
-          font-size: 17px;
-        }
-
-        ul {
-          padding-left: 22px;
-          color: #c0cadb;
-          line-height: 2;
-        }
-
-        .footer {
-          margin-top: 30px;
-          color: #7f8da7;
-          font-size: 13px;
-        }
-
-        @media (max-width: 480px) {
-          .card {
-            padding: 26px 22px;
-          }
-        }
-      `}</style>
     </main>
   );
 }
