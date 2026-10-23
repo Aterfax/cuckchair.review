@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#080b16" />
+  
+  <!-- Polygonal chair detail view -->
+  <g transform="translate(400, 300)">
+    <!-- Detailed lumbar support area -->
+    <polygon points="-60,-80 -20,-80 -10,-40 0,-20 -10,0 -20,20 -60,20 -70,-20" fill="#10b981" stroke="#047857" stroke-width="3" />
+    <polygon points="-40,-70 -30,-70 -25,-50 -20,-40 -20,-20 -30,-20 -40,-20 -50,-40 -50,-60" fill="#34d399" />
+    
+    <!-- Mesh pattern - geometric dots -->
+    <circle cx="-45" cy="-60" r="4" fill="#059669" />
+    <circle cx="-25" cy="-60" r="4" fill="#059669" />
+    <circle cx="-5" cy="-60" r="4" fill="#059669" />
+    <circle cx="-45" cy="-35" r="4" fill="#059669" />
+    <circle cx="-25" cy="-35" r="4" fill="#059669" />
+    <circle cx="-5" cy="-35" r="4" fill="#059669" />
+    <circle cx="-45" cy="-10" r="4" fill="#059669" />
+    <circle cx="-25" cy="-10" r="4" fill="#059669" />
+    <circle cx="-5" cy="-10" r="4" fill="#059669" />
+    
+    <!-- Armrest detail -->
+    <polygon points="20,-40 60,-40 70,-20 50,20 20,20 10,0" fill="#4b5563" stroke="#374151" stroke-width="2" />
+    <polygon points="25,-35 55,-35 60,-25 45,15 25,15 15,5" fill="#6b7280" />
+    
+    <!-- Stitching lines -->
+    <line x1="-55" y1="-70" x2="-25" y2="-70" stroke="#059669" stroke-width="2" />
+    <line x1="-55" y1="-40" x2="-25" y2="-40" stroke="#059669" stroke-width="2" />
+    <line x1="-55" y1="-10" x2="-25" y2="-10" stroke="#059669" stroke-width="2" />
+  </g>
+  
+  <text x="400" y="580" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#6b7280" text-anchor="middle">Polygonal Chair — Detail View</text>
+</svg>

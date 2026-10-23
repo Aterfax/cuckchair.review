@@ -1,0 +1,271 @@
+/* CuckGuessr game panels (token-driven) */
+
+.gamePanel {
+  margin-top: 26px;
+  padding: 22px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--bg-panel);
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.gameTitle {
+  margin: 0;
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-size: 21px;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+}
+
+.gameIntro {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.rules {
+  margin: 0 0 0 18px;
+  padding: 0;
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.rules li::marker {
+  color: var(--accent);
+}
+
+.note {
+  margin: 4px 0 0;
+  font-size: 12px;
+  color: var(--text-faint);
+}
+
+.toolbar {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.stat {
+  font-family: var(--font-mono), monospace;
+  font-variant-numeric: tabular-nums;
+  font-size: 12px;
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  padding: 4px 12px;
+  background: var(--bg-inset);
+}
+
+.stage {
+  width: 100%;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--bg-inset);
+  display: block;
+}
+
+.archiveBadge {
+  align-self: flex-start;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-pill);
+  padding: 3px 10px;
+  background: var(--accent-tint);
+}
+
+.optionsField {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.optionsField:disabled {
+  opacity: 0.55;
+}
+
+.question {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+  padding: 0;
+}
+
+.options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.option {
+  padding: 11px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg-raised);
+  color: var(--text-secondary);
+  font-size: 14px;
+  text-align: left;
+  cursor: pointer;
+  transition: background 120ms ease, border-color 120ms ease, color 120ms ease;
+}
+
+.option:hover:not([disabled]) {
+  border-color: var(--accent);
+  color: var(--text-primary);
+}
+
+.option.correct {
+  border-color: var(--positive);
+  background: var(--positive-tint);
+  color: var(--positive);
+  font-weight: 600;
+}
+
+.option.wrong {
+  border-color: var(--negative);
+  background: rgba(251, 113, 133, 0.1);
+  color: var(--negative);
+}
+
+.option.dim {
+  opacity: 0.45;
+}
+
+.reveal {
+  border-top: 1px solid var(--border);
+  padding-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.revealLocation {
+  margin: 0;
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--text-primary);
+}
+
+.revealFlavor {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.revealWhere {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.revealMapLink {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.revealMapLink:hover {
+  color: var(--text-primary);
+}
+
+.finalScore {
+  margin: 0;
+  font-family: var(--font-mono), monospace;
+  font-variant-numeric: tabular-nums;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--positive);
+}
+
+.nextBtn {
+  align-self: flex-start;
+  padding: 10px 18px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  background: var(--accent-grad, var(--accent-deep));
+  color: var(--on-accent);
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.nextBtn:hover {
+  background: var(--accent);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 520px) {
+  .options {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---- Background music (GameMusic) ---- */
+/* Class names deliberately avoid the e2e/verify hook substrings (thumb,
+   overlay, counter, next, meta, content). The stage is hidden but never
+   display:none — some browsers throttle audio on hidden nodes. */
+.musicStage {
+  position: fixed;
+  left: -9999px;
+  bottom: 0;
+  width: 240px;
+  height: 180px;
+  opacity: 0;
+  pointer-events: none;
+  border: 0;
+}
+
+.audioChip {
+  position: fixed;
+  right: 14px;
+  bottom: 14px;
+  z-index: 60;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  background: var(--bg-panel);
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+  box-shadow: var(--shadow-pop);
+  cursor: pointer;
+}
+
+.audioChip:hover {
+  border-color: var(--border-strong);
+  color: var(--text-primary);
+}
+
+.audioChip:disabled {
+  cursor: default;
+  opacity: 0.8;
+}
+
+.audioChipOn {
+  color: var(--accent);
+  border-color: var(--border-strong);
+}
+
+.audioChipMuted {
+  color: var(--text-muted);
+}
+
+.audioChipTap {
+  color: var(--accent);
+}

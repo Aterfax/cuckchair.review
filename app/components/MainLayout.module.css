@@ -1,0 +1,61 @@
+/* MainLayout styles – uses global CSS variables */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1;
+  /* One small constant sliver of ambient between the sticky header and the
+     content slab (the old clamp stacked with .page's 48px into ~100px of
+     dead zone); sides and bottom keep the original rhythm. */
+  padding: 12px clamp(1rem, 3vw, 3rem) clamp(2rem, 4vw, 4rem);
+  line-height: 1.6;
+  width: 100%;
+  background:
+    radial-gradient(
+      ellipse at 18% 0%,
+      rgb(99 102 241 / 9%),
+      transparent 46%
+    ),
+    radial-gradient(
+      ellipse at 92% 88%,
+      rgb(245 158 11 / 6%),
+      transparent 40%
+    ),
+    radial-gradient(
+      ellipse at 0% 100%,
+      rgb(79 70 229 / 8%),
+      transparent 38%
+    ),
+    linear-gradient(160deg, #080a13 0%, #0e1226 55%, #090c17 100%);
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  background: var(--footer-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: var(--text-faint);
+  text-align: center;
+  padding: 1.1rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+}
+
+/* Moved out of the homepage wrapper (the old .homeFooter) so the tagline
+   rides on the global footer on every route. */
+.siteTagline {
+  margin: 0;
+  font-size: 13px;
+}
+
+.footerCopy {
+  margin: 0;
+}

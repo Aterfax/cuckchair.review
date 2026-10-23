@@ -1,0 +1,18 @@
+<svg viewBox="0 0 400 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder scene">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0e1e33"/>
+      <stop offset="1" stop-color="#1c3350"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="260" fill="url(#bg)"/>
+  <rect x="40" y="24" width="320" height="150" fill="rgba(8,20,40,0.35)" stroke="#2a3757"/><path d="M40 120 Q120 58 200 96 T360 104 L360 174 L40 174 Z" fill="#1a2c4e"/><rect x="40" y="128" width="320" height="46" fill="#17335e"/><path d="M60 138 Q130 130 200 140 T340 138" stroke="#4f7fb8" fill="none" stroke-width="3" opacity="0.6"/><path d="M60 152 Q140 146 220 154 T340 150" stroke="#4f7fb8" fill="none" stroke-width="2" opacity="0.4"/>
+  <g transform="translate(158,118)">
+    <rect x="8" y="-26" width="76" height="52" rx="16" fill="#16233f"/>
+    <rect x="-6" y="0" width="18" height="46" rx="7" fill="#1c2c4f"/>
+    <rect x="80" y="0" width="18" height="46" rx="7" fill="#1c2c4f"/>
+    <rect x="6" y="24" width="80" height="20" rx="6" fill="#20335c"/>
+    <rect x="12" y="44" width="10" height="16" fill="#0d1526"/>
+    <rect x="70" y="44" width="10" height="16" fill="#0d1526"/>
+  </g>
+</svg>

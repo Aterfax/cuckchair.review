@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#080b16" />
+  
+  <!-- Polygonal chair side view -->
+  <g transform="translate(400, 340)">
+    <!-- Backrest side profile - polygon -->
+    <polygon points="-55,0 -55,-130 -35,-130 -20,-100 0,-70 15,-30 -5,10 -40,10 -55,0" fill="#9ca3af" stroke="#374151" stroke-width="3" />
+    <polygon points="-45,-10 -45,-120 -30,-120 -20,-100 -15,-80 -10,-60 -10,-20 -25,-20 -25,-40 -20,-50 -35,-50 -45,-30" fill="#d1d5db" />
+    
+    <!-- Seat side -->
+    <polygon points="-45,20 65,20 85,40 45,60 -45,60" fill="#374151" stroke="#4b5563" stroke-width="3" />
+    <polygon points="-35,30 55,30 65,40 35,50 -35,50" fill="#4b5563" />
+    
+    <!-- Armrest side -->
+    <polygon points="-45,55 -30,55 -28,35 -40,35" fill="#6b7280" stroke="#374151" stroke-width="2" />
+    
+    <!-- Base side -->
+    <polygon points="0,80 -50,80 -60,110 -40,140 -20,140 0,120 0,80" fill="#6b7280" stroke="#4b5563" stroke-width="2" />
+    <circle cx="0" cy="110" r="10" fill="#9ca3af" />
+    
+    <!-- Gas lift side -->
+    <polygon points="-5,-25 5,-25 5,60 -5,60" fill="#6b7280" stroke="#4b5563" stroke-width="2" />
+    
+    <!-- Caster -->
+    <circle cx="-50" cy="140" r="8" fill="#374151" />
+    <circle cx="20" cy="140" r="8" fill="#374151" />
+  </g>
+  
+  <text x="400" y="580" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#6b7280" text-anchor="middle">Polygonal Chair — Side View</text>
+</svg>

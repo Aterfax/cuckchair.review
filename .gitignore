@@ -1,0 +1,38 @@
+# Node modules
+node_modules/
+
+# Next.js build output and static export
+.next/
+out/
+build/
+test-results/
+playwright-report/
+
+# TypeScript declaration files
+*.tsbuildinfo
+
+# Logs
+npm-debug.log*
+yarn-error.log*
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Environment variable files
+.env.*
+.env.local
+.env.*.local
+
+# IDE folders
+.idea/
+.vscode/
+
+# Docker files if used
+.dockerignore
+Dockerfile
+
+# Miscellaneous cache files
+.cache/
+.tmp/
+

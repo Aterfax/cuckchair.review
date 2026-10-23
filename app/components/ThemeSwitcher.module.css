@@ -1,0 +1,117 @@
+/* ThemeSwitcher — compact segmented controls living in the header */
+
+.switcher {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* Vigil entrance (first reveal only; the class persists afterwards). */
+.unlocked {
+  animation: vigilEnter 0.5s ease both;
+}
+
+@keyframes vigilEnter {
+  from {
+    opacity: 0;
+    transform: translateY(6px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .unlocked {
+    animation: none;
+  }
+}
+
+.vigilToast {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 10px);
+  z-index: 70;
+  padding: 7px 12px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--bg-panel);
+  color: var(--text-secondary);
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 11.5px;
+  letter-spacing: 0.02em;
+  box-shadow: var(--shadow-pop);
+  white-space: nowrap;
+}
+
+.group {
+  display: flex;
+  gap: 2px;
+  padding: 2px;
+  background: var(--bg-inset);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+}
+
+.chip,
+.chipActive {
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  padding: 6px 10px;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.chip:hover {
+  color: var(--text-primary);
+}
+
+.chipActive {
+  background: var(--accent);
+  color: var(--on-accent);
+  font-weight: 700;
+}
+
+.swatch,
+.swatchActive {
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.swatch:hover {
+  transform: scale(1.15);
+}
+
+.swatchActive {
+  box-shadow:
+    0 0 0 2px var(--bg-inset),
+    0 0 0 4px var(--accent);
+}
+
+@media (max-width: 640px) {
+  .switcher {
+    justify-content: center;
+  }
+
+  .vigilToast {
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

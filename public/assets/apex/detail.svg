@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#080b16" />
+  
+  <!-- Polygonal chair detail view -->
+  <g transform="translate(400, 300)">
+    <!-- Simplified seat cushion detail -->
+    <polygon points="-70,-50 -30,-50 -20,-30 -10,-10 -20,10 -40,10 -70,10 -80,-10" fill="#6b7280" stroke="#374151" stroke-width="3" />
+    <polygon points="-55,-45 -40,-45 -30,-35 -20,-20 -20,0 -35,0 -55,0 -65,-20" fill="#9ca3af" />
+    
+    <!-- Stitching - geometric dashes -->
+    <line x1="-60" y1="-45" x2="-35" y2="-45" stroke="#374151" stroke-width="2" />
+    <line x1="-60" y1="-20" x2="-35" y2="-20" stroke="#374151" stroke-width="2" />
+    <line x1="-60" y1="5" x2="-35" y2="5" stroke="#374151" stroke-width="2" />
+    
+    <!-- Adjustment knob -->
+    <circle cx="-50" cy="-10" r="8" fill="#6b7280" stroke="#374151" stroke-width="2" />
+    <circle cx="-50" cy="-10" r="4" fill="#9ca3af" />
+    
+    <!-- Side lever -->
+    <polygon points="15,-50 45,-50 50,-30 30,10 15,10 10,-10" fill="#6b7280" stroke="#374151" stroke-width="2" />
+    <polygon points="20,-45 40,-45 45,-35 25,5 20,5 15,-5" fill="#9ca3af" />
+    
+    <!-- Pivot bolts -->
+    <circle cx="-55" cy="-50" r="5" fill="#374151" />
+    <circle cx="-25" cy="-50" r="5" fill="#374151" />
+    <circle cx="-55" cy="10" r="5" fill="#374151" />
+    <circle cx="-25" cy="10" r="5" fill="#374151" />
+  </g>
+  
+  <text x="400" y="580" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#6b7280" text-anchor="middle">Polygonal Chair — Detail View</text>
+</svg>

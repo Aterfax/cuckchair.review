@@ -1,0 +1,31 @@
+/* Parallax background – layered blurred orbs that drift at different speeds on scroll */
+
+.parallaxWrap {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.parallaxLayer {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgb(var(--orb-color) / 0.10),
+    transparent 70%
+  );
+  filter: blur(48px);
+  opacity: 0.5;
+  transform: translate(-50%, -50%)
+    translateY(calc(var(--scroll, 0px) * var(--speed, 0) * -1))
+    translateX(calc(var(--scroll, 0px) * var(--speed, 0) * -0.4));
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .parallaxLayer {
+    transform: translate(-50%, -50%);
+  }
+}

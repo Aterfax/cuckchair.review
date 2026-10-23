@@ -1,0 +1,79 @@
+/* ScoreBadge — a ring gauge with the score in the middle. The ring fills
+   by conic gradient from --pct (0–100); mono tabular numerals keep digits
+   from dancing. Colors flow from the active theme's tokens. */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ring {
+  position: relative;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--positive) calc(var(--pct) * 1%),
+    var(--border) 0
+  );
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+  border-radius: 50%;
+  background: var(--bg-panel);
+}
+
+.scoreNum {
+  font-family: var(--font-mono), monospace;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.scoreDen {
+  font-family: var(--font-mono), monospace;
+  color: var(--text-faint);
+}
+
+/* Sizes */
+.lg .ring {
+  width: 76px;
+  height: 76px;
+}
+
+.lg .inner {
+  position: absolute;
+  inset: 7px;
+}
+
+.lg .scoreNum {
+  font-size: 20px;
+}
+
+.lg .scoreDen {
+  font-size: 11px;
+}
+
+.sm .ring {
+  width: 44px;
+  height: 44px;
+}
+
+.sm .inner {
+  position: absolute;
+  inset: 4px;
+}
+
+.sm .scoreNum {
+  font-size: 13px;
+}
+
+.sm .scoreDen {
+  display: none;
+}
